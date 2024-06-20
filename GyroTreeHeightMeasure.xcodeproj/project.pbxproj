@@ -11,6 +11,9 @@
 		5909EFBF2BFA817400DD0D8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909EFBE2BFA817400DD0D8D /* ContentView.swift */; };
 		5909EFC12BFA817600DD0D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5909EFC02BFA817600DD0D8D /* Assets.xcassets */; };
 		5909EFC42BFA817600DD0D8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5909EFC32BFA817600DD0D8D /* Preview Assets.xcassets */; };
+		59104DFD2C15FED800275DAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59104DFC2C15FED700275DAA /* Images.xcassets */; };
+		59ECA7022C1DEE01003F911F /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59ECA7012C1DEE01003F911F /* finish.mp3 */; };
+		59ECA7042C1DEE53003F911F /* counter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59ECA7032C1DEE53003F911F /* counter.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		5909EFBE2BFA817400DD0D8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5909EFC02BFA817600DD0D8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5909EFC32BFA817600DD0D8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		59104DFC2C15FED700275DAA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		59ECA7012C1DEE01003F911F /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finish.mp3; sourceTree = SOURCE_ROOT; };
+		59ECA7032C1DEE53003F911F /* counter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = counter.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 		5909EFBB2BFA817400DD0D8D /* GyroTreeHeightMeasure */ = {
 			isa = PBXGroup;
 			children = (
+				59ECA7032C1DEE53003F911F /* counter.mp3 */,
+				59ECA7012C1DEE01003F911F /* finish.mp3 */,
 				5909EFBC2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift */,
 				5909EFBE2BFA817400DD0D8D /* ContentView.swift */,
+				59104DFC2C15FED700275DAA /* Images.xcassets */,
 				5909EFC02BFA817600DD0D8D /* Assets.xcassets */,
 				5909EFC22BFA817600DD0D8D /* Preview Content */,
 			);
@@ -125,6 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59ECA7042C1DEE53003F911F /* counter.mp3 in Resources */,
+				59104DFD2C15FED800275DAA /* Images.xcassets in Resources */,
+				59ECA7022C1DEE01003F911F /* finish.mp3 in Resources */,
 				5909EFC42BFA817600DD0D8D /* Preview Assets.xcassets in Resources */,
 				5909EFC12BFA817600DD0D8D /* Assets.xcassets in Resources */,
 			);
@@ -278,8 +290,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,6 +298,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CZU.GyroTreeHeightMeasure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,8 +322,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +330,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CZU.GyroTreeHeightMeasure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
