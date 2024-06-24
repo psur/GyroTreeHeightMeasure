@@ -10,9 +10,9 @@ import os
 import SwiftUI
 import UIKit
 
-protocol MeasureNavigationCoordinating {}
+protocol MeasureNavigationCoordinating: NavigationControllerCoordinator {}
 
-final class MeasureNavigationCoordinator: MeasureNavigationCoordinating {
+final class MeasureNavigationCoordinator: NSObject, MeasureNavigationCoordinating {
     private(set) var navigationController: UINavigationController = CustomNavigationController()
     private lazy var cancellables = Set<AnyCancellable>()
     private let eventSubject = PassthroughSubject<MeasureNavigationCoordinatorEvent, Never>()
@@ -21,7 +21,7 @@ final class MeasureNavigationCoordinator: MeasureNavigationCoordinating {
     
     // MARK: Lifecycle
     deinit {
-        logger.info("❌ Deinit ProfileNavigationCoordinator")
+        logger.info("❌ Deinit MeasureNavigationCoordinator")
     }
     
     func start() {
@@ -32,5 +32,11 @@ final class MeasureNavigationCoordinator: MeasureNavigationCoordinating {
 extension MeasureNavigationCoordinator {
     func makeMeasureView() -> UIViewController {
         return UIHostingController(rootView: MeasureView())
+    }
+}
+
+extension MeasureNavigationCoordinator: EventEmitting {
+    var eventPublisher: AnyPublisher<MeasureNavigationCoordinatorEvent, Never> {
+        eventSubject.eraseToAnyPublisher()
     }
 }

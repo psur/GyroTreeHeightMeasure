@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct MeasureView: View {
+    @Bindable var store = MeasureViewStore()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            Text("\(store.deviceOrientation.orientationX), \(store.deviceOrientation.orientationY), \(store.deviceOrientation.orientationZ)")
+            Text("Distance : \(store.distance)")
+            Text("Measured Angle : \(store.savedOrientationZ)")
+                
+            Divider()
+            Button(action: { store.send(.startMeasure)}){
+                Image("ButtonMeasure").resizable()
+                    .frame(width: 300, height:200)
+                    .cornerRadius(20.0)
+            }.frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
+        }
+        
+        
+        .padding()
     }
 }
 

@@ -25,6 +25,7 @@ final class MainTabBarCoordinator: NSObject, TabBarControllerCoordinator {
 extension MainTabBarCoordinator {
     func start() {
         tabBarController.viewControllers = [
+            setupMeasureView().rootViewController,
             setupProfileView().rootViewController
         ]
     }
@@ -35,23 +36,28 @@ private extension MainTabBarCoordinator {
         let tabBarController = UITabBarController()
         let appearance = UITabBarAppearance()
         appearance.backgroundEffect = .none
+        
         tabBarController.tabBar.standardAppearance = appearance
         tabBarController.tabBar.scrollEdgeAppearance = appearance
         tabBarController.delegate = self
         return tabBarController
     }
-//    
-//    func setupMeasureView() -> ViewControllerCoordinator {
-//        let measureCoordinator = CategoriesNavigationCoordinator(container: container)
-//        startChildCoordinator(categoriesCoordinator)
-//        categoriesCoordinator.rootViewController.tabBarItem = UITabBarItem(
-//            title: "Categories",
-//            image: UIImage(systemName: "list.bullet.rectangle.portrait"),
-//            tag: 0
-//        )
-//        
-//        return categoriesCoordinator
-//    }
+    
+    func setupMeasureView() -> ViewControllerCoordinator {
+        let measureCoordinator = MeasureNavigationCoordinator()
+        startChildCoordinator(measureCoordinator)
+        measureCoordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handleEvent(event)
+            }
+            .store(in: &cancellables)
+        measureCoordinator.rootViewController.tabBarItem = UITabBarItem(
+            title: "Measure",
+            image: UIImage(systemName: "list.bullet.rectangle.portrait"),
+            tag: 0
+        )
+        return measureCoordinator
+    }
     
     func setupProfileView() -> ViewControllerCoordinator {
         let profileCoordinator = ProfileNavigationCoordinator()
@@ -60,7 +66,7 @@ private extension MainTabBarCoordinator {
             .sink { [weak self] event in
                 self?.handleEvent(event)
             }
-            .store(in: &cancellables) // swiftlint:disable:next no_magic_numbers
+            .store(in: &cancellables)
         profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.crop.circle"), tag: 0)
         
         return profileCoordinator
@@ -78,6 +84,13 @@ extension MainTabBarCoordinator: UITabBarControllerDelegate {
 // MARK: - Handling events
 private extension MainTabBarCoordinator {
     func handleEvent(_ event: ProfileNavigationCoordinatorEvent) {
+        switch event {
+        default:
+            break
+        }
+    }
+    
+    func handleEvent(_ event: MeasureNavigationCoordinatorEvent) {
         switch event {
         default:
             break

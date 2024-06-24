@@ -16,6 +16,16 @@ import os
         eventSubject.eraseToAnyPublisher()
     }
     var state: MeasureViewState = .initial
+    struct DeviceOrientation {
+        var orientationX: Double = 0.0
+        var orientationY: Double = 0.0
+        var orientationZ: Double = 0.0
+    }
+    
+    var deviceOrientation = DeviceOrientation(orientationX: 0, orientationY: 0, orientationZ: 0)
+    var distance: Double = 0.0
+    var savedOrientationZ: Double = 0.0
+    
 }
 
 extension MeasureViewStore {

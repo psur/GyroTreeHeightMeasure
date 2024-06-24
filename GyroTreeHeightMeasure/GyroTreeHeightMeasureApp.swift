@@ -23,6 +23,7 @@ struct GyroTreeHeightMeasureApp: App {
                 .onAppear {
                     logger.info("🦈 AppCoordinator has appeared.")
                 }
+                .ignoresSafeArea(.all)
         }
     }
 }

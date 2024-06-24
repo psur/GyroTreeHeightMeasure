@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FC361C62C2962D900FD8F1B /* ProfileViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC361C52C2962D900FD8F1B /* ProfileViewAction.swift */; };
+		1FC361C82C2962E200FD8F1B /* ProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC361C72C2962E200FD8F1B /* ProfileViewState.swift */; };
+		1FC361CA2C2962EA00FD8F1B /* ProfileViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC361C92C2962EA00FD8F1B /* ProfileViewStore.swift */; };
 		1FD15AF32C2719D600464818 /* MeasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AF22C2719D600464818 /* MeasureView.swift */; };
 		1FD15AF52C271A0400464818 /* MeasureNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AF42C271A0400464818 /* MeasureNavigationCoordinator.swift */; };
 		1FD15AF82C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AF72C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FC361C52C2962D900FD8F1B /* ProfileViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewAction.swift; sourceTree = "<group>"; };
+		1FC361C72C2962E200FD8F1B /* ProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewState.swift; sourceTree = "<group>"; };
+		1FC361C92C2962EA00FD8F1B /* ProfileViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewStore.swift; sourceTree = "<group>"; };
 		1FD15AF22C2719D600464818 /* MeasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureView.swift; sourceTree = "<group>"; };
 		1FD15AF42C271A0400464818 /* MeasureNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureNavigationCoordinator.swift; sourceTree = "<group>"; };
 		1FD15AF72C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureNavigationCoordinatorEvent.swift; sourceTree = "<group>"; };
@@ -90,6 +96,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FC361C42C2962C400FD8F1B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1FC361C52C2962D900FD8F1B /* ProfileViewAction.swift */,
+				1FC361C72C2962E200FD8F1B /* ProfileViewState.swift */,
+				1FC361C92C2962EA00FD8F1B /* ProfileViewStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		1FC361CB2C29636900FD8F1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE38E2C25E2850010529B /* ProfileView.swift */,
+				1FDCE39F2C25E5B60010529B /* ProfileViewEvent.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1FD15AF02C27199C00464818 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +146,7 @@
 		1FD15AF92C271B3100464818 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5909EFBE2BFA817400DD0D8D /* ContentView.swift */,
 				1FD15AF22C2719D600464818 /* MeasureView.swift */,
 				1FD15B032C271D3700464818 /* MeasureViewEvent.swift */,
 			);
@@ -214,9 +240,9 @@
 		1FDCE38D2C25E2740010529B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1FC361C42C2962C400FD8F1B /* Store */,
 				1FDCE3902C25E3AF0010529B /* Navigation */,
-				1FDCE38E2C25E2850010529B /* ProfileView.swift */,
-				1FDCE39F2C25E5B60010529B /* ProfileViewEvent.swift */,
+				1FC361CB2C29636900FD8F1B /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -292,16 +318,15 @@
 		5909EFBB2BFA817400DD0D8D /* GyroTreeHeightMeasure */ = {
 			isa = PBXGroup;
 			children = (
-				1FDCE3932C25E4B20010529B /* SharedUI */,
 				1FDCE3722C25D5D60010529B /* App */,
 				5909EFC02BFA817600DD0D8D /* Assets.xcassets */,
 				1FDCE3712C25D5D10010529B /* Common */,
-				5909EFBE2BFA817400DD0D8D /* ContentView.swift */,
-				1FD15AF02C27199C00464818 /* Sounds */,
 				5909EFBC2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift */,
 				59104DFC2C15FED700275DAA /* Images.xcassets */,
 				5909EFC22BFA817600DD0D8D /* Preview Content */,
 				1FDCE3872C25D95E0010529B /* Scenes */,
+				1FDCE3932C25E4B20010529B /* SharedUI */,
+				1FD15AF02C27199C00464818 /* Sounds */,
 			);
 			path = GyroTreeHeightMeasure;
 			sourceTree = "<group>";
@@ -395,12 +420,14 @@
 				1FDCE3832C25D8440010529B /* CoordinatorView.swift in Sources */,
 				1FDCE3862C25D8750010529B /* AppCoordinator.swift in Sources */,
 				1FDCE3A32C25E6250010529B /* EventEmitting.swift in Sources */,
+				1FC361C82C2962E200FD8F1B /* ProfileViewState.swift in Sources */,
 				1FDCE3812C25D6DA0010529B /* CustomError.swift in Sources */,
 				1FDCE3772C25D63A0010529B /* NavigationControllerCoordinator.swift in Sources */,
 				1FDCE3962C25E4C90010529B /* CustomNavigationController.swift in Sources */,
 				1FD15AF82C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift in Sources */,
 				1FD15B042C271D3700464818 /* MeasureViewEvent.swift in Sources */,
 				1FD15AF52C271A0400464818 /* MeasureNavigationCoordinator.swift in Sources */,
+				1FC361CA2C2962EA00FD8F1B /* ProfileViewStore.swift in Sources */,
 				1FDCE37E2C25D6A40010529B /* UIViewController+Ext.swift in Sources */,
 				1FD15AFE2C271C7F00464818 /* MeasureViewState.swift in Sources */,
 				1FDCE39C2C25E5450010529B /* UINavigationController+Ext.swift in Sources */,
@@ -411,6 +438,7 @@
 				1FDCE3922C25E3C00010529B /* ProfileNavigationCoordinator.swift in Sources */,
 				5909EFBF2BFA817400DD0D8D /* ContentView.swift in Sources */,
 				1FD15B002C271C8700464818 /* MeasureViewStore.swift in Sources */,
+				1FC361C62C2962D900FD8F1B /* ProfileViewAction.swift in Sources */,
 				1FDCE3A02C25E5B60010529B /* ProfileViewEvent.swift in Sources */,
 				1FD15AFC2C271C7400464818 /* MeasureViewAction.swift in Sources */,
 				5909EFBD2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift in Sources */,

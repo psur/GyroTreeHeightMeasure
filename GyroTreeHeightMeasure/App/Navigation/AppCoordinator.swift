@@ -38,7 +38,6 @@ extension AppCoordinator {
 //                NSAttributedString.Key.font: TextType.caption.uiFont
 //            ], for: .normal
 //        )
-        UINavigationBar.appearance().tintColor = .white
     }
     
     func makeTabBarFlow() -> ViewControllerCoordinator {
