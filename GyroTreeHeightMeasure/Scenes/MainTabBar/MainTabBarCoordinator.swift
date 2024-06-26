@@ -34,13 +34,51 @@ extension MainTabBarCoordinator {
 private extension MainTabBarCoordinator {
     func makeTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
-        let appearance = UITabBarAppearance()
-        appearance.backgroundEffect = .none
+        let tabBarAppearance = UITabBarAppearance()
+        let tabBarItemAppearance = UITabBarItemAppearance()
+
+        tabBarItemAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemGray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+        tabBarItemAppearance.normal.iconColor = UIColor.systemGray
+        tabBarItemAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+        tabBarItemAppearance.selected.iconColor = UIColor.white
         
-        tabBarController.tabBar.standardAppearance = appearance
-        tabBarController.tabBar.scrollEdgeAppearance = appearance
+        tabBarAppearance.stackedLayoutAppearance = tabBarItemAppearance
+
+        tabBarController.tabBar.standardAppearance = tabBarAppearance
+        tabBarController.tabBar.scrollEdgeAppearance = tabBarAppearance
+        
+        tabBarController.tabBar.standardAppearance = tabBarAppearance
+        tabBarController.tabBar.scrollEdgeAppearance = tabBarAppearance
         tabBarController.delegate = self
+        
+        // Create a CAGradientLayer
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(red: 0, green: 100/255, blue: 0, alpha: 1).cgColor, // Dark Green
+            UIColor(red: 144/255, green: 238/255, blue: 144/255, alpha: 1).cgColor // Light Green
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.frame = tabBarController.tabBar.bounds
+        
+        // Render the gradient as an image
+        if let gradientImage = getImageFrom(gradientLayer) {
+            tabBarAppearance.backgroundImage = gradientImage
+            tabBarController.tabBar.standardAppearance = tabBarAppearance
+            tabBarController.tabBar.scrollEdgeAppearance = tabBarAppearance
+        }
+        
         return tabBarController
+    }
+    
+    // Helper function to convert a CAGradientLayer to UIImage
+    func getImageFrom(_ gradientLayer: CAGradientLayer) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(gradientLayer.bounds.size, gradientLayer.isOpaque, 0.0)
+        defer { UIGraphicsEndImageContext() }
+        
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        gradientLayer.render(in: context)
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
     
     func setupMeasureView() -> ViewControllerCoordinator {

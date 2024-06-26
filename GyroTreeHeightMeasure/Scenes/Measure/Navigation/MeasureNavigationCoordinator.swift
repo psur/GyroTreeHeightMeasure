@@ -25,7 +25,9 @@ final class MeasureNavigationCoordinator: NSObject, MeasureNavigationCoordinatin
     }
     
     func start() {
-        navigationController.setViewControllers([makeMeasureView()], animated: true)
+        let measureViewController = makeMeasureView()
+        measureViewController.title = "Measure"
+        navigationController.setViewControllers([measureViewController], animated: true)
     }
 }
 

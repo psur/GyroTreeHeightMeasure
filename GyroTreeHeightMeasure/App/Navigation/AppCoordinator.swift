@@ -30,6 +30,7 @@ extension AppCoordinator {
     }
     
     func setupAppUI() {
+
         UITabBar.appearance().backgroundColor = .systemBrown
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().tintColor = .white

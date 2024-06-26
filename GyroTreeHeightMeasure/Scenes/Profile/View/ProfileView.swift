@@ -15,12 +15,14 @@ struct ProfileView: View {
             VStack {
                 Text("Height: \(String(format: "%.0f", store.height)) cm")
                 Slider(value: $store.height, in: 100...220, step: 1)
+                    .tint(.green)
                     .padding(.horizontal)
                 Button {
                     store.send(.saveProfile(store.height))
                 } label: {
                     Text("Save profile")
                 }
+                .foregroundColor(.green)
                 .buttonStyle(BorderedButtonStyle())
             }
             .navigationTitle("Profile page")

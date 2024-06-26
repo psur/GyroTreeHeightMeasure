@@ -11,11 +11,11 @@ extension UINavigationController {
     func setupNavigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
         
-        appearance.backgroundColor = .systemBlue
+        appearance.backgroundColor = .systemGreen
         appearance.shadowImage = UIImage()
         appearance.shadowColor = .clear
         appearance.titleTextAttributes = [
-//            NSAttributedString.Key.font: UIFont(name: <#T##String#>, size: <#T##CGFloat#>),
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24),
             NSAttributedString.Key.foregroundColor: UIColor(.white)
         ]
         navigationBar.standardAppearance = appearance
@@ -23,3 +23,4 @@ extension UINavigationController {
         navigationBar.scrollEdgeAppearance = appearance
     }
 }
+

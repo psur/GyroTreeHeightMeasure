@@ -25,7 +25,9 @@ final class ProfileNavigationCoordinator: NSObject, ProfileCoordinating {
     }
     
     func start() {
-        navigationController.setViewControllers([makeProfile()], animated: true)
+        let profileViewController = makeProfile()
+        profileViewController.title = "Profile"
+        navigationController.setViewControllers([profileViewController], animated: true)
     }
 }
 
