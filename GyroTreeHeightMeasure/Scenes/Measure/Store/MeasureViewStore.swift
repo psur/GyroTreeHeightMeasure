@@ -5,7 +5,9 @@
 //  Created by Marcel Mravec on 22.06.2024.
 //
 
+import AVFoundation
 import Combine
+import CoreMotion
 import Foundation
 import os
 
@@ -25,14 +27,61 @@ import os
     var deviceOrientation = DeviceOrientation(orientationX: 0, orientationY: 0, orientationZ: 0)
     var distance: Double = 0.0
     var savedOrientationZ: Double = 0.0
-    
+    var player: AVAudioPlayer?
+    var motion = CMMotionManager()
+    var measuredAngle: Double = 0.0
 }
 
 extension MeasureViewStore {
     func send(_ action: MeasureViewAction) {
         switch action {
         case .startMeasure:
-            break
+            startMeasure()
+        }
+    }
+    
+    func startMeasure() {
+        for _ in 1...5 {
+            playSound("counter")
+            sleep(1)
+        }
+        logger.info("Sound was played.")
+        measuredAngle = (-1) * deviceOrientation.orientationZ * 180 / Double.pi
+        distance = 172 / tan(-deviceOrientation.orientationZ)
+        playSound("finish")
+    }
+    
+    func playSound(_ soundName: String) {
+        
+        guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else {
+            return }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func readGyro() {
+        motion.deviceMotionUpdateInterval = 0.5
+        motion.startDeviceMotionUpdates(to: .main) { (data, error) in
+            guard error == nil else {
+                self.logger.error("\(error)")
+                return
+            }
+            if let data {
+                self.deviceOrientation.orientationX = data.attitude.roll
+                self.deviceOrientation.orientationY = data.attitude.yaw
+                self.deviceOrientation.orientationZ = data.attitude.pitch
+//                self.deviceOrientation.orientationX = (data.attitude.roll) * 180 / Double.pi
+//                self.deviceOrientation.orientationY = (data.attitude.yaw) * 180 / Double.pi
+//                self.deviceOrientation.orientationZ = (data.attitude.pitch) * 180 / Double.pi
+                
+            }
         }
     }
 }

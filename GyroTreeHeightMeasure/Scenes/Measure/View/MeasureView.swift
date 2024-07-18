@@ -14,7 +14,7 @@ struct MeasureView: View {
             
             Text("\(store.deviceOrientation.orientationX), \(store.deviceOrientation.orientationY), \(store.deviceOrientation.orientationZ)")
             Text("Distance : \(store.distance)")
-            Text("Measured Angle : \(store.savedOrientationZ)")
+            Text("Measured Angle : \(store.measuredAngle)")
                 
             Divider()
             Button(action: { store.send(.startMeasure)}){
@@ -23,9 +23,10 @@ struct MeasureView: View {
                     .cornerRadius(20.0)
             }.frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
         }
-        
-        
         .padding()
+        .onAppear {
+            store.readGyro()
+        }
     }
 }
 

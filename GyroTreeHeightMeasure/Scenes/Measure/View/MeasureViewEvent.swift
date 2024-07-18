@@ -7,4 +7,6 @@
 
 import Foundation
 
-enum MeasureViewEvent {}
+enum MeasureViewEvent {
+    case finishedLengthMeasure
+}
