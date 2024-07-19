@@ -97,6 +97,22 @@ private extension MainTabBarCoordinator {
         return measureCoordinator
     }
     
+    func setupHeightMeasureView() -> ViewControllerCoordinator {
+        let measureCoordinator = MeasureNavigationCoordinator()
+        startChildCoordinator(measureCoordinator)
+        measureCoordinator.eventPublisher
+            .sink { [weak self] event in
+                self?.handleEvent(event)
+            }
+            .store(in: &cancellables)
+        measureCoordinator.rootViewController.tabBarItem = UITabBarItem(
+            title: "Measure hight",
+            image: UIImage(systemName: "list.bullet.rectangle.portrait"),
+            tag: 0
+        )
+        return measureCoordinator
+    }
+    
     func setupProfileView() -> ViewControllerCoordinator {
         let profileCoordinator = ProfileNavigationCoordinator()
         startChildCoordinator(profileCoordinator)
@@ -130,6 +146,9 @@ private extension MainTabBarCoordinator {
     
     func handleEvent(_ event: MeasureNavigationCoordinatorEvent) {
         switch event {
+        case .finishedLengthMeasure:
+            
+            break
         default:
             break
         }

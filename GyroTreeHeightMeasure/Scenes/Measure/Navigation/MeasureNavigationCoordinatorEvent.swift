@@ -7,4 +7,6 @@
 
 import Foundation
 
-enum MeasureNavigationCoordinatorEvent {}
+enum MeasureNavigationCoordinatorEvent {
+    case finishedLengthMeasure
+}

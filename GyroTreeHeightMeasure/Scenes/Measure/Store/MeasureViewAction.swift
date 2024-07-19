@@ -9,4 +9,5 @@ import Foundation
 
 enum MeasureViewAction {
     case startMeasure
+    case measureHeight
 }

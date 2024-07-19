@@ -10,6 +10,7 @@ import Foundation
 struct MeasureViewState {
     enum Status {
         case initial
+        case heightMeasure
     }
     
     var status: Status = .initial

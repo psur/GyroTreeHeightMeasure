@@ -26,6 +26,11 @@ import os
     
     var deviceOrientation = DeviceOrientation(orientationX: 0, orientationY: 0, orientationZ: 0)
     var distance: Double = 0.0
+    var observationPointHeight = 172.0
+    var height: Double = 0.0
+    var treeHeight: Double {
+        height + observationPointHeight
+    }
     var savedOrientationZ: Double = 0.0
     var player: AVAudioPlayer?
     var motion = CMMotionManager()
@@ -33,10 +38,14 @@ import os
 }
 
 extension MeasureViewStore {
+    @MainActor
     func send(_ action: MeasureViewAction) {
         switch action {
         case .startMeasure:
             startMeasure()
+            self.state.status = .heightMeasure
+        case .measureHeight:
+            measureHeight()
         }
     }
     
@@ -47,7 +56,18 @@ extension MeasureViewStore {
         }
         logger.info("Sound was played.")
         measuredAngle = (-1) * deviceOrientation.orientationZ * 180 / Double.pi
-        distance = 172 / tan(-deviceOrientation.orientationZ)
+        distance = observationPointHeight / tan(-deviceOrientation.orientationZ)
+        playSound("finish")
+    }
+    
+    func measureHeight() {
+        for _ in 1...5 {
+            playSound("counter")
+            sleep(1)
+        }
+        logger.info("Sound was played.")
+        measuredAngle = (-1) * deviceOrientation.orientationZ * 180 / Double.pi
+        height = distance * tan(deviceOrientation.orientationZ)
         playSound("finish")
     }
     
@@ -77,10 +97,6 @@ extension MeasureViewStore {
                 self.deviceOrientation.orientationX = data.attitude.roll
                 self.deviceOrientation.orientationY = data.attitude.yaw
                 self.deviceOrientation.orientationZ = data.attitude.pitch
-//                self.deviceOrientation.orientationX = (data.attitude.roll) * 180 / Double.pi
-//                self.deviceOrientation.orientationY = (data.attitude.yaw) * 180 / Double.pi
-//                self.deviceOrientation.orientationZ = (data.attitude.pitch) * 180 / Double.pi
-                
             }
         }
     }

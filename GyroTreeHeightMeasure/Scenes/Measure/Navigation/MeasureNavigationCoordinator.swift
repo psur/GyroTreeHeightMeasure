@@ -33,7 +33,22 @@ final class MeasureNavigationCoordinator: NSObject, MeasureNavigationCoordinatin
 
 extension MeasureNavigationCoordinator {
     func makeMeasureView() -> UIViewController {
+        let store = MeasureViewStore()
+        store.eventPublisher
+            .sink { [weak self] event in
+                self?.handleEvent(event)
+            }
+            .store(in: &cancellables)
         return UIHostingController(rootView: MeasureView())
+    }
+}
+
+extension MeasureNavigationCoordinator {
+    func handleEvent(_ event: MeasureViewEvent) {
+        switch event {
+        case .finishedLengthMeasure:
+            eventSubject.send(.finishedLengthMeasure)
+        }
     }
 }
 
