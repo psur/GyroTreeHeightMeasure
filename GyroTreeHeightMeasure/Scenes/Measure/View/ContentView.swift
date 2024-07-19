@@ -28,9 +28,6 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundStyle(.tint)
             
             Text("\(model.OrientationX), \(model.OrientationY), \(model.OrientationZ)")
             Text("Distance : \(model.distance)")
@@ -42,9 +39,6 @@ struct ContentView: View {
                     .frame(width: 300, height:200)
                     .cornerRadius(20.0)
             }.frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
-           // eventSubject.send(.close)
-           // logger.info("Onboarding button close tapped")
-
         }
         
         
@@ -110,22 +104,10 @@ struct ContentView: View {
                 }
             }
         }
-        
-        
-        
-       
-        //AudioServicesPlaySystemSound(1034)
     }
     
     func MyGyro(){
-//        motion.accelerometerUpdateInterval = 0.5
-//        motion.startAccelerometerUpdates(to:OperationQueue.current!){(data, error) in
-//            if let trueData = data{
-//                //print(data?.acceleration.x)
-//                model.OrientationX = (data?.acceleration.x)!
-//            }
-//        }
-        
+
         motion.deviceMotionUpdateInterval = 0.3
         motion.startDeviceMotionUpdates(to:OperationQueue.current!){(data, error) in
             if let trueData = data{

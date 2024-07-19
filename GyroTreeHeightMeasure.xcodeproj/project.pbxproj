@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FC361C62C2962D900FD8F1B /* ProfileViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC361C52C2962D900FD8F1B /* ProfileViewAction.swift */; };
+		1FC361C82C2962E200FD8F1B /* ProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC361C72C2962E200FD8F1B /* ProfileViewState.swift */; };
+		1FC361CA2C2962EA00FD8F1B /* ProfileViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC361C92C2962EA00FD8F1B /* ProfileViewStore.swift */; };
+		1FD15AF32C2719D600464818 /* MeasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AF22C2719D600464818 /* MeasureView.swift */; };
+		1FD15AF52C271A0400464818 /* MeasureNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AF42C271A0400464818 /* MeasureNavigationCoordinator.swift */; };
+		1FD15AF82C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AF72C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift */; };
+		1FD15AFC2C271C7400464818 /* MeasureViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AFB2C271C7400464818 /* MeasureViewAction.swift */; };
+		1FD15AFE2C271C7F00464818 /* MeasureViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AFD2C271C7F00464818 /* MeasureViewState.swift */; };
+		1FD15B002C271C8700464818 /* MeasureViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15AFF2C271C8700464818 /* MeasureViewStore.swift */; };
+		1FD15B022C271D1E00464818 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15B012C271D1E00464818 /* Store.swift */; };
+		1FD15B042C271D3700464818 /* MeasureViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD15B032C271D3700464818 /* MeasureViewEvent.swift */; };
+		1FDCE3752C25D5F20010529B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3742C25D5F20010529B /* Coordinator.swift */; };
+		1FDCE3772C25D63A0010529B /* NavigationControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3762C25D63A0010529B /* NavigationControllerCoordinator.swift */; };
+		1FDCE3792C25D64B0010529B /* ViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3782C25D64B0010529B /* ViewControllerCoordinator.swift */; };
+		1FDCE37B2C25D66A0010529B /* TabBarControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE37A2C25D66A0010529B /* TabBarControllerCoordinator.swift */; };
+		1FDCE37E2C25D6A40010529B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE37D2C25D6A40010529B /* UIViewController+Ext.swift */; };
+		1FDCE3812C25D6DA0010529B /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3802C25D6DA0010529B /* CustomError.swift */; };
+		1FDCE3832C25D8440010529B /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3822C25D8440010529B /* CoordinatorView.swift */; };
+		1FDCE3862C25D8750010529B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3852C25D8750010529B /* AppCoordinator.swift */; };
+		1FDCE3892C25D9B90010529B /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3882C25D9B90010529B /* MainTabBarCoordinator.swift */; };
+		1FDCE38C2C25DA600010529B /* MainTabBarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE38B2C25DA600010529B /* MainTabBarEvent.swift */; };
+		1FDCE38F2C25E2850010529B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE38E2C25E2850010529B /* ProfileView.swift */; };
+		1FDCE3922C25E3C00010529B /* ProfileNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3912C25E3C00010529B /* ProfileNavigationCoordinator.swift */; };
+		1FDCE3962C25E4C90010529B /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3952C25E4C90010529B /* CustomNavigationController.swift */; };
+		1FDCE3982C25E4EC0010529B /* CustomNavigationControllerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3972C25E4EC0010529B /* CustomNavigationControllerEvent.swift */; };
+		1FDCE39C2C25E5450010529B /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE39B2C25E5450010529B /* UINavigationController+Ext.swift */; };
+		1FDCE39E2C25E58F0010529B /* ProfileNavigationCoordinatorEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE39D2C25E58F0010529B /* ProfileNavigationCoordinatorEvent.swift */; };
+		1FDCE3A02C25E5B60010529B /* ProfileViewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE39F2C25E5B60010529B /* ProfileViewEvent.swift */; };
+		1FDCE3A32C25E6250010529B /* EventEmitting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCE3A22C25E6250010529B /* EventEmitting.swift */; };
 		5909EFBD2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909EFBC2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift */; };
 		5909EFBF2BFA817400DD0D8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5909EFBE2BFA817400DD0D8D /* ContentView.swift */; };
 		5909EFC12BFA817600DD0D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5909EFC02BFA817600DD0D8D /* Assets.xcassets */; };
@@ -17,14 +46,43 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FC361C52C2962D900FD8F1B /* ProfileViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewAction.swift; sourceTree = "<group>"; };
+		1FC361C72C2962E200FD8F1B /* ProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewState.swift; sourceTree = "<group>"; };
+		1FC361C92C2962EA00FD8F1B /* ProfileViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewStore.swift; sourceTree = "<group>"; };
+		1FD15AF22C2719D600464818 /* MeasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureView.swift; sourceTree = "<group>"; };
+		1FD15AF42C271A0400464818 /* MeasureNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureNavigationCoordinator.swift; sourceTree = "<group>"; };
+		1FD15AF72C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureNavigationCoordinatorEvent.swift; sourceTree = "<group>"; };
+		1FD15AFB2C271C7400464818 /* MeasureViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewAction.swift; sourceTree = "<group>"; };
+		1FD15AFD2C271C7F00464818 /* MeasureViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewState.swift; sourceTree = "<group>"; };
+		1FD15AFF2C271C8700464818 /* MeasureViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewStore.swift; sourceTree = "<group>"; };
+		1FD15B012C271D1E00464818 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		1FD15B032C271D3700464818 /* MeasureViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewEvent.swift; sourceTree = "<group>"; };
+		1FDCE3742C25D5F20010529B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1FDCE3762C25D63A0010529B /* NavigationControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerCoordinator.swift; sourceTree = "<group>"; };
+		1FDCE3782C25D64B0010529B /* ViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		1FDCE37A2C25D66A0010529B /* TabBarControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerCoordinator.swift; sourceTree = "<group>"; };
+		1FDCE37D2C25D6A40010529B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		1FDCE3802C25D6DA0010529B /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		1FDCE3822C25D8440010529B /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		1FDCE3852C25D8750010529B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1FDCE3882C25D9B90010529B /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		1FDCE38B2C25DA600010529B /* MainTabBarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarEvent.swift; sourceTree = "<group>"; };
+		1FDCE38E2C25E2850010529B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		1FDCE3912C25E3C00010529B /* ProfileNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCoordinator.swift; sourceTree = "<group>"; };
+		1FDCE3952C25E4C90010529B /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		1FDCE3972C25E4EC0010529B /* CustomNavigationControllerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationControllerEvent.swift; sourceTree = "<group>"; };
+		1FDCE39B2C25E5450010529B /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		1FDCE39D2C25E58F0010529B /* ProfileNavigationCoordinatorEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationCoordinatorEvent.swift; sourceTree = "<group>"; };
+		1FDCE39F2C25E5B60010529B /* ProfileViewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewEvent.swift; sourceTree = "<group>"; };
+		1FDCE3A22C25E6250010529B /* EventEmitting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmitting.swift; sourceTree = "<group>"; };
 		5909EFB92BFA817400DD0D8D /* GyroTreeHeightMeasure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GyroTreeHeightMeasure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5909EFBC2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroTreeHeightMeasureApp.swift; sourceTree = "<group>"; };
 		5909EFBE2BFA817400DD0D8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5909EFC02BFA817600DD0D8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5909EFC32BFA817600DD0D8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		59104DFC2C15FED700275DAA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		59ECA7012C1DEE01003F911F /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finish.mp3; sourceTree = SOURCE_ROOT; };
-		59ECA7032C1DEE53003F911F /* counter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = counter.mp3; sourceTree = SOURCE_ROOT; };
+		59ECA7012C1DEE01003F911F /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = finish.mp3; path = GyroTreeHeightMeasure/Sounds/finish.mp3; sourceTree = SOURCE_ROOT; };
+		59ECA7032C1DEE53003F911F /* counter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = counter.mp3; path = GyroTreeHeightMeasure/Sounds/counter.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +96,209 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FC361C42C2962C400FD8F1B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1FC361C52C2962D900FD8F1B /* ProfileViewAction.swift */,
+				1FC361C72C2962E200FD8F1B /* ProfileViewState.swift */,
+				1FC361C92C2962EA00FD8F1B /* ProfileViewStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		1FC361CB2C29636900FD8F1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE38E2C25E2850010529B /* ProfileView.swift */,
+				1FDCE39F2C25E5B60010529B /* ProfileViewEvent.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1FD15AF02C27199C00464818 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				59ECA7032C1DEE53003F911F /* counter.mp3 */,
+				59ECA7012C1DEE01003F911F /* finish.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		1FD15AF12C2719C500464818 /* Measure */ = {
+			isa = PBXGroup;
+			children = (
+				1FD15AFA2C271B3700464818 /* Store */,
+				1FD15AF92C271B3100464818 /* View */,
+				1FD15AF62C271A1100464818 /* Navigation */,
+			);
+			path = Measure;
+			sourceTree = "<group>";
+		};
+		1FD15AF62C271A1100464818 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1FD15AF42C271A0400464818 /* MeasureNavigationCoordinator.swift */,
+				1FD15AF72C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1FD15AF92C271B3100464818 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5909EFBE2BFA817400DD0D8D /* ContentView.swift */,
+				1FD15AF22C2719D600464818 /* MeasureView.swift */,
+				1FD15B032C271D3700464818 /* MeasureViewEvent.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1FD15AFA2C271B3700464818 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1FD15AFB2C271C7400464818 /* MeasureViewAction.swift */,
+				1FD15AFD2C271C7F00464818 /* MeasureViewState.swift */,
+				1FD15AFF2C271C8700464818 /* MeasureViewStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		1FDCE3712C25D5D10010529B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3A12C25E61C0010529B /* Protocols */,
+				1FDCE37F2C25D6D40010529B /* Types */,
+				1FDCE37C2C25D6980010529B /* Extensions */,
+				1FDCE3732C25D5E70010529B /* Navigation */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1FDCE3722C25D5D60010529B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3842C25D86B0010529B /* Navigation */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1FDCE3732C25D5E70010529B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3742C25D5F20010529B /* Coordinator.swift */,
+				1FDCE3762C25D63A0010529B /* NavigationControllerCoordinator.swift */,
+				1FDCE3782C25D64B0010529B /* ViewControllerCoordinator.swift */,
+				1FDCE37A2C25D66A0010529B /* TabBarControllerCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1FDCE37C2C25D6980010529B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE37D2C25D6A40010529B /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1FDCE37F2C25D6D40010529B /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3802C25D6DA0010529B /* CustomError.swift */,
+				1FDCE3822C25D8440010529B /* CoordinatorView.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		1FDCE3842C25D86B0010529B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3852C25D8750010529B /* AppCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1FDCE3872C25D95E0010529B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1FD15AF12C2719C500464818 /* Measure */,
+				1FDCE38D2C25E2740010529B /* Profile */,
+				1FDCE38A2C25D9C50010529B /* MainTabBar */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1FDCE38A2C25D9C50010529B /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3882C25D9B90010529B /* MainTabBarCoordinator.swift */,
+				1FDCE38B2C25DA600010529B /* MainTabBarEvent.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		1FDCE38D2C25E2740010529B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1FC361C42C2962C400FD8F1B /* Store */,
+				1FDCE3902C25E3AF0010529B /* Navigation */,
+				1FC361CB2C29636900FD8F1B /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1FDCE3902C25E3AF0010529B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3912C25E3C00010529B /* ProfileNavigationCoordinator.swift */,
+				1FDCE39D2C25E58F0010529B /* ProfileNavigationCoordinatorEvent.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1FDCE3932C25E4B20010529B /* SharedUI */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE39A2C25E5390010529B /* Views */,
+				1FDCE3992C25E5300010529B /* Extensions */,
+			);
+			path = SharedUI;
+			sourceTree = "<group>";
+		};
+		1FDCE3942C25E4C00010529B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3952C25E4C90010529B /* CustomNavigationController.swift */,
+				1FDCE3972C25E4EC0010529B /* CustomNavigationControllerEvent.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		1FDCE3992C25E5300010529B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE39B2C25E5450010529B /* UINavigationController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1FDCE39A2C25E5390010529B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3942C25E4C00010529B /* UIKit */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FDCE3A12C25E61C0010529B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1FDCE3A22C25E6250010529B /* EventEmitting.swift */,
+				1FD15B012C271D1E00464818 /* Store.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		5909EFB02BFA817400DD0D8D = {
 			isa = PBXGroup;
 			children = (
@@ -57,13 +318,15 @@
 		5909EFBB2BFA817400DD0D8D /* GyroTreeHeightMeasure */ = {
 			isa = PBXGroup;
 			children = (
-				59ECA7032C1DEE53003F911F /* counter.mp3 */,
-				59ECA7012C1DEE01003F911F /* finish.mp3 */,
-				5909EFBC2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift */,
-				5909EFBE2BFA817400DD0D8D /* ContentView.swift */,
-				59104DFC2C15FED700275DAA /* Images.xcassets */,
+				1FDCE3722C25D5D60010529B /* App */,
 				5909EFC02BFA817600DD0D8D /* Assets.xcassets */,
+				1FDCE3712C25D5D10010529B /* Common */,
+				5909EFBC2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift */,
+				59104DFC2C15FED700275DAA /* Images.xcassets */,
 				5909EFC22BFA817600DD0D8D /* Preview Content */,
+				1FDCE3872C25D95E0010529B /* Scenes */,
+				1FDCE3932C25E4B20010529B /* SharedUI */,
+				1FD15AF02C27199C00464818 /* Sounds */,
 			);
 			path = GyroTreeHeightMeasure;
 			sourceTree = "<group>";
@@ -149,8 +412,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDCE3792C25D64B0010529B /* ViewControllerCoordinator.swift in Sources */,
+				1FD15AF32C2719D600464818 /* MeasureView.swift in Sources */,
+				1FDCE3982C25E4EC0010529B /* CustomNavigationControllerEvent.swift in Sources */,
+				1FD15B022C271D1E00464818 /* Store.swift in Sources */,
+				1FDCE38F2C25E2850010529B /* ProfileView.swift in Sources */,
+				1FDCE3832C25D8440010529B /* CoordinatorView.swift in Sources */,
+				1FDCE3862C25D8750010529B /* AppCoordinator.swift in Sources */,
+				1FDCE3A32C25E6250010529B /* EventEmitting.swift in Sources */,
+				1FC361C82C2962E200FD8F1B /* ProfileViewState.swift in Sources */,
+				1FDCE3812C25D6DA0010529B /* CustomError.swift in Sources */,
+				1FDCE3772C25D63A0010529B /* NavigationControllerCoordinator.swift in Sources */,
+				1FDCE3962C25E4C90010529B /* CustomNavigationController.swift in Sources */,
+				1FD15AF82C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift in Sources */,
+				1FD15B042C271D3700464818 /* MeasureViewEvent.swift in Sources */,
+				1FD15AF52C271A0400464818 /* MeasureNavigationCoordinator.swift in Sources */,
+				1FC361CA2C2962EA00FD8F1B /* ProfileViewStore.swift in Sources */,
+				1FDCE37E2C25D6A40010529B /* UIViewController+Ext.swift in Sources */,
+				1FD15AFE2C271C7F00464818 /* MeasureViewState.swift in Sources */,
+				1FDCE39C2C25E5450010529B /* UINavigationController+Ext.swift in Sources */,
+				1FDCE3892C25D9B90010529B /* MainTabBarCoordinator.swift in Sources */,
+				1FDCE38C2C25DA600010529B /* MainTabBarEvent.swift in Sources */,
+				1FDCE37B2C25D66A0010529B /* TabBarControllerCoordinator.swift in Sources */,
+				1FDCE39E2C25E58F0010529B /* ProfileNavigationCoordinatorEvent.swift in Sources */,
+				1FDCE3922C25E3C00010529B /* ProfileNavigationCoordinator.swift in Sources */,
 				5909EFBF2BFA817400DD0D8D /* ContentView.swift in Sources */,
+				1FD15B002C271C8700464818 /* MeasureViewStore.swift in Sources */,
+				1FC361C62C2962D900FD8F1B /* ProfileViewAction.swift in Sources */,
+				1FDCE3A02C25E5B60010529B /* ProfileViewEvent.swift in Sources */,
+				1FD15AFC2C271C7400464818 /* MeasureViewAction.swift in Sources */,
 				5909EFBD2BFA817400DD0D8D /* GyroTreeHeightMeasureApp.swift in Sources */,
+				1FDCE3752C25D5F20010529B /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GyroTreeHeightMeasure/Preview Content\"";
-				DEVELOPMENT_TEAM = H62TL746QH;
+				DEVELOPMENT_TEAM = P3K32DW2KW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -316,7 +608,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GyroTreeHeightMeasure/Preview Content\"";
-				DEVELOPMENT_TEAM = H62TL746QH;
+				DEVELOPMENT_TEAM = P3K32DW2KW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
