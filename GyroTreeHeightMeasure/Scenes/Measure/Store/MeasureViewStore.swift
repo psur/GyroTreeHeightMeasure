@@ -41,15 +41,15 @@ extension MeasureViewStore {
     @MainActor
     func send(_ action: MeasureViewAction) {
         switch action {
-        case .startMeasure:
-            startMeasure()
+        case .measureDistance:
+            measureDistance()
             self.state.status = .heightMeasure
         case .measureHeight:
             measureHeight()
         }
     }
-    
-    func startMeasure() {
+    //I change name from startMeasure to measureDistance to be more readeable
+    func measureDistance() {
         for _ in 1...5 {
             playSound("counter")
             sleep(1)

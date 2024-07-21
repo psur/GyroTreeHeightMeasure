@@ -18,7 +18,7 @@ struct MeasureView: View {
                 Text("Measured Angle: \(store.measuredAngle)")
                 
                 Divider()
-                Button(action: { store.send(.startMeasure)}){
+                Button(action: { store.send(.measureDistance)}){
                     Image("ButtonMeasure").resizable()
                         .frame(width: 300, height:200)
                         .cornerRadius(20.0)
