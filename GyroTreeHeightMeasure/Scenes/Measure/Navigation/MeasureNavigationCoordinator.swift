@@ -39,7 +39,7 @@ extension MeasureNavigationCoordinator {
                 self?.handleEvent(event)
             }
             .store(in: &cancellables)
-        return UIHostingController(rootView: MeasureView())
+        return UIHostingController(rootView: MeasureDistanceView())
     }
 }
 

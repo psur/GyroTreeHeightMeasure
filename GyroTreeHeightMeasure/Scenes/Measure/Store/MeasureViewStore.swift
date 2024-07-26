@@ -31,7 +31,7 @@ import os
     var treeHeight: Double {
         height + observationPointHeight
     }
-    var savedOrientationZ: Double = 0.0
+//    var savedOrientationZ: Double = 0.0
     var player: AVAudioPlayer?
     var motion = CMMotionManager()
     var measuredAngle: Double = 0.0

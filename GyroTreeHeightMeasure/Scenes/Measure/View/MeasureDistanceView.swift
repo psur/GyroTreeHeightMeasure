@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeasureView: View {
+struct MeasureDistanceView: View {
     @Bindable var store = MeasureViewStore()
     var body: some View {
         VStack {
@@ -45,5 +45,5 @@ struct MeasureView: View {
 }
 
 #Preview {
-    MeasureView()
+    MeasureDistanceView()
 }
