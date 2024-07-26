@@ -21,6 +21,9 @@ final class AppCoordinator: AppCoordinating, ObservableObject {
     
     // MARK: Lifecycle
     init() {
+        //Marcel please check
+        let defaults = UserDefaults.standard
+        defaults.set(159, forKey: "deviceHeight")
     }
 }
 

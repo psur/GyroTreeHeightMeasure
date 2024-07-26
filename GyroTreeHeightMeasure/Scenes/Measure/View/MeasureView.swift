@@ -9,16 +9,23 @@ import SwiftUI
 
 struct MeasureView: View {
     @Bindable var store = MeasureViewStore()
+    //@StateObject var deviceHeight = deviceHeightTempClass()
+   
+    //neviem ten store tak idem tu
     var body: some View {
         VStack {
+            
             switch store.state.status {
-            case .initial:
+            case .distanceMeasure:
                 Text("\(store.deviceOrientation.orientationX), \(store.deviceOrientation.orientationY), \(store.deviceOrientation.orientationZ)")
                 Text("Distance: \(store.distance)")
                 Text("Measured Angle: \(store.measuredAngle)")
                 
                 Divider()
-                Button(action: { store.send(.measureDistance)}){
+                Button(action: { store.send(.measureDistance)
+                    
+                })
+                {
                     Image("ButtonMeasure").resizable()
                         .frame(width: 300, height:200)
                         .cornerRadius(20.0)

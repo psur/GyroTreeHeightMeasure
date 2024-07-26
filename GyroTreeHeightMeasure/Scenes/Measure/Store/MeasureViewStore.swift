@@ -17,7 +17,8 @@ import os
     var eventPublisher: AnyPublisher<MeasureViewEvent, Never> {
         eventSubject.eraseToAnyPublisher()
     }
-    var state: MeasureViewState = .initial
+    var state: MeasureViewState = .distanceMeasure
+    
     struct DeviceOrientation {
         var orientationX: Double = 0.0
         var orientationY: Double = 0.0
@@ -26,7 +27,9 @@ import os
     
     var deviceOrientation = DeviceOrientation(orientationX: 0, orientationY: 0, orientationZ: 0)
     var distance: Double = 0.0
-    var observationPointHeight = 172.0
+    
+    var observationPointHeight = 172.0 // toto by tu nemalo byt asi
+    
     var height: Double = 0.0
     var treeHeight: Double {
         height + observationPointHeight
@@ -37,18 +40,22 @@ import os
     var measuredAngle: Double = 0.0
 }
 
+
 extension MeasureViewStore {
     @MainActor
     func send(_ action: MeasureViewAction) {
         switch action {
         case .measureDistance:
             measureDistance()
-            self.state.status = .heightMeasure
+            //PS: 21.7. switch off status change to be able to repeat the measurements
+            //self.state.status = .heightMeasure
         case .measureHeight:
             measureHeight()
         }
     }
-    //I change name from startMeasure to measureDistance to be more readeable
+    
+
+    //PS: changed name from startMeasure to measureDistance to be more readeable
     func measureDistance() {
         for _ in 1...5 {
             playSound("counter")
@@ -56,6 +63,18 @@ extension MeasureViewStore {
         }
         logger.info("Sound was played.")
         measuredAngle = (-1) * deviceOrientation.orientationZ * 180 / Double.pi
+        
+        // tu skusit potiahnut hodnotu z Profile Marcel pls check
+        let defaults = UserDefaults.standard
+        let UserGlobalDeviceHeight = defaults.value(forKey: "deviceHeight")
+        
+        print(UserGlobalDeviceHeight ?? "oh no")
+        //deviceHeightTempClass.deviceHeightTemp
+        
+        //pretocit na double
+        self.observationPointHeight = UserGlobalDeviceHeight as! Double
+        logger.info("Current Device Height \(self.observationPointHeight)")
+        
         distance = observationPointHeight / tan(-deviceOrientation.orientationZ)
         playSound("finish")
     }

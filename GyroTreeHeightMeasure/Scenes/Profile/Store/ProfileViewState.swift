@@ -9,10 +9,10 @@ import Foundation
 
 struct ProfileViewState {
     enum Status {
-        case initial
+        case distanceMeasure
     }
     
-    var status: Status = .initial
+    var status: Status = .distanceMeasure
 
-    static let initial = ProfileViewState()
+    static let distanceMeasure = ProfileViewState()
 }

@@ -41,6 +41,8 @@
 		5909EFC12BFA817600DD0D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5909EFC02BFA817600DD0D8D /* Assets.xcassets */; };
 		5909EFC42BFA817600DD0D8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5909EFC32BFA817600DD0D8D /* Preview Assets.xcassets */; };
 		59104DFD2C15FED800275DAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59104DFC2C15FED700275DAA /* Images.xcassets */; };
+		597451492C5293DF00F2FE32 /* DataModelSettings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 597451472C5293DF00F2FE32 /* DataModelSettings.xcdatamodeld */; };
+		597912F02C4DBAE10060DCC3 /* DeviceHeightTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597912EF2C4DBAE10060DCC3 /* DeviceHeightTemp.swift */; };
 		59ECA7022C1DEE01003F911F /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59ECA7012C1DEE01003F911F /* finish.mp3 */; };
 		59ECA7042C1DEE53003F911F /* counter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59ECA7032C1DEE53003F911F /* counter.mp3 */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		5909EFC02BFA817600DD0D8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5909EFC32BFA817600DD0D8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		59104DFC2C15FED700275DAA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		597451482C5293DF00F2FE32 /* DataModelSettings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModelSettings.xcdatamodel; sourceTree = "<group>"; };
+		597912EF2C4DBAE10060DCC3 /* DeviceHeightTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHeightTemp.swift; sourceTree = "<group>"; };
 		59ECA7012C1DEE01003F911F /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = finish.mp3; path = GyroTreeHeightMeasure/Sounds/finish.mp3; sourceTree = SOURCE_ROOT; };
 		59ECA7032C1DEE53003F911F /* counter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = counter.mp3; path = GyroTreeHeightMeasure/Sounds/counter.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -166,6 +170,7 @@
 		1FDCE3712C25D5D10010529B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				597912EF2C4DBAE10060DCC3 /* DeviceHeightTemp.swift */,
 				1FDCE3A12C25E61C0010529B /* Protocols */,
 				1FDCE37F2C25D6D40010529B /* Types */,
 				1FDCE37C2C25D6980010529B /* Extensions */,
@@ -302,6 +307,7 @@
 		5909EFB02BFA817400DD0D8D = {
 			isa = PBXGroup;
 			children = (
+				597451472C5293DF00F2FE32 /* DataModelSettings.xcdatamodeld */,
 				5909EFBB2BFA817400DD0D8D /* GyroTreeHeightMeasure */,
 				5909EFBA2BFA817400DD0D8D /* Products */,
 			);
@@ -424,10 +430,12 @@
 				1FDCE3812C25D6DA0010529B /* CustomError.swift in Sources */,
 				1FDCE3772C25D63A0010529B /* NavigationControllerCoordinator.swift in Sources */,
 				1FDCE3962C25E4C90010529B /* CustomNavigationController.swift in Sources */,
+				597451492C5293DF00F2FE32 /* DataModelSettings.xcdatamodeld in Sources */,
 				1FD15AF82C271ABC00464818 /* MeasureNavigationCoordinatorEvent.swift in Sources */,
 				1FD15B042C271D3700464818 /* MeasureViewEvent.swift in Sources */,
 				1FD15AF52C271A0400464818 /* MeasureNavigationCoordinator.swift in Sources */,
 				1FC361CA2C2962EA00FD8F1B /* ProfileViewStore.swift in Sources */,
+				597912F02C4DBAE10060DCC3 /* DeviceHeightTemp.swift in Sources */,
 				1FDCE37E2C25D6A40010529B /* UIViewController+Ext.swift in Sources */,
 				1FD15AFE2C271C7F00464818 /* MeasureViewState.swift in Sources */,
 				1FDCE39C2C25E5450010529B /* UINavigationController+Ext.swift in Sources */,
@@ -654,6 +662,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		597451472C5293DF00F2FE32 /* DataModelSettings.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				597451482C5293DF00F2FE32 /* DataModelSettings.xcdatamodel */,
+			);
+			currentVersion = 597451482C5293DF00F2FE32 /* DataModelSettings.xcdatamodel */;
+			name = DataModelSettings.xcdatamodeld;
+			path = /Users/psurovy/Documents/GyroTreeHeightMeasure/DataModelSettings.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5909EFB12BFA817400DD0D8D /* Project object */;
 }

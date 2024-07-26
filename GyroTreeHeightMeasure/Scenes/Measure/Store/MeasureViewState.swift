@@ -9,11 +9,11 @@ import Foundation
 
 struct MeasureViewState {
     enum Status {
-        case initial
+        case distanceMeasure
         case heightMeasure
     }
     
-    var status: Status = .initial
+    var status: Status = .distanceMeasure
 
-    static let initial = MeasureViewState()
+    static let distanceMeasure = MeasureViewState()
 }
