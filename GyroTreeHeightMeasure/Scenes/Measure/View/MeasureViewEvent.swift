@@ -8,5 +8,6 @@
 import Foundation
 
 enum MeasureViewEvent {
-    case finishedLengthMeasure
+    case finishedDistanceMeasure
+    case finishedHeightMeasure
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 enum MeasureNavigationCoordinatorEvent {
-    case finishedLengthMeasure
+    case dismiss(Coordinator)
 }
