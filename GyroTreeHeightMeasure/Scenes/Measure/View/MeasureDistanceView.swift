@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MeasureView: View {
+struct MeasureDistanceView: View {
     @Bindable var store = MeasureViewStore()
     //@StateObject var deviceHeight = deviceHeightTempClass()
    
@@ -52,5 +52,5 @@ struct MeasureView: View {
 }
 
 #Preview {
-    MeasureView()
+    MeasureDistanceView()
 }

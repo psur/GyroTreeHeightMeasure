@@ -39,16 +39,29 @@ extension MeasureNavigationCoordinator {
                 self?.handleEvent(event)
             }
             .store(in: &cancellables)
-        return UIHostingController(rootView: MeasureView())
+        return UIHostingController(rootView: MeasureDistanceView())
     }
 }
 
 extension MeasureNavigationCoordinator {
     func handleEvent(_ event: MeasureViewEvent) {
         switch event {
-        case .finishedLengthMeasure:
-            eventSubject.send(.finishedLengthMeasure)
+        case .finishedDistanceMeasure:
+            self.navigationController.pushViewController(makeMeasureFlow(), animated: true)
+            self.eventSubject.send(.dismiss(self))
+        case .finishedHeightMeasure:
+            release(coordinator: MeasureNavigationCoordinator())
         }
+    }
+    
+    func makeMeasureFlow() -> UIViewController {
+        let viewController = createHostingController(for: MeasureHeightView())
+        return viewController
+    }
+    
+    private func createHostingController<T: EventEmitting>(for view: T) -> UIHostingController<T> {
+        
+        return UIHostingController(rootView: view)
     }
 }
 

@@ -146,9 +146,8 @@ private extension MainTabBarCoordinator {
     
     func handleEvent(_ event: MeasureNavigationCoordinatorEvent) {
         switch event {
-        case .finishedLengthMeasure:
-            
-            break
+        case .dismiss(let coordinator):
+            release(coordinator: coordinator)
         default:
             break
         }
